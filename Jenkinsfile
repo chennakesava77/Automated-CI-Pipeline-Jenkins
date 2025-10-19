@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    tools {
-        nodejs 'NodeJS' // Must match your NodeJS installation in Jenkins
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -14,7 +10,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                // Use legacy-peer-deps to fix ESLint dependency issues
+                // Install all dependencies using legacy-peer-deps to avoid ESLint conflicts
                 sh 'npm install --legacy-peer-deps'
             }
         }
@@ -22,13 +18,13 @@ pipeline {
         stage('Static Code Analysis') {
             steps {
                 // Lint all JS files and automatically fix fixable issues
-                sh 'npx eslint src/**/*.js --fix || true'
+                sh 'npx eslint src/**/*.js --fix'
             }
         }
 
         stage('Run Tests') {
             steps {
-                // Run tests and generate JUnit XML report
+                // Run Jest tests and generate JUnit XML report
                 sh 'npm test'
             }
         }
@@ -48,10 +44,9 @@ pipeline {
 
     post {
         always {
-            // Adjust this path if Jest is configured with jest-junit
-            junit 'reports/junit/results.xml'
+            // Publish Jest JUnit XML results
+            junit 'tests/test-results.xml'
             echo 'Build finished. Check results above.'
-            // mail step can be added if email plugin configured
         }
     }
 }
