@@ -1,11 +1,11 @@
-# 🚀 Automated CI Pipeline for a Web Application using Jenkins
 
-## 📘 Project Title
+
+                 -- Project Title--
 **Automated CI Pipeline for a Web Application using Jenkins**
 
 ---
 
-## 🧩 Description
+##  Description
 This project demonstrates a **Continuous Integration (CI) pipeline** for a simple Node.js web application using **Jenkins**.  
 The pipeline automatically performs source code checkout, dependency installation, linting, unit testing, packaging, and artifact archiving.
 
@@ -14,7 +14,7 @@ This setup ensures code quality and reliability through automation.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 | Component | Technology |
 |------------|-------------|
 | **Programming Language / Framework** | Node.js |
@@ -26,7 +26,7 @@ This setup ensures code quality and reliability through automation.
 
 ---
 
-## 🔁 Pipeline Overview
+##  Pipeline Overview
 Below is an overview of the stages implemented in the Jenkinsfile:
 
 | Stage | Description |
@@ -40,7 +40,7 @@ Below is an overview of the stages implemented in the Jenkinsfile:
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Install Jenkins
 - Download and install Jenkins from [https://www.jenkins.io/download/](https://www.jenkins.io/download/)
@@ -82,7 +82,7 @@ Below is an overview of the stages implemented in the Jenkinsfile:
 
 ---
 
-## 🧾 Expected Outputs
+##  Expected Outputs
 After a successful build:
 - ✅ All tests pass using Jest.
 - ✅ A `.zip` artifact is generated under `build/artifact.zip`.
@@ -93,7 +93,7 @@ After a successful build:
 
 ---
 
-## 📊 Results / Screenshots
+##  Results / Screenshots
 Below are the required CI pipeline evidence screenshots:
 
 1. ✅ Jenkins Dashboard showing the project/job  
@@ -106,7 +106,7 @@ Below are the required CI pipeline evidence screenshots:
 
 ---
 
-## 📦 Example Jenkinsfile (Reference)
+##  Example Jenkinsfile (Reference)
 
 ```groovy
 pipeline {
@@ -158,3 +158,4 @@ pipeline {
     }
 }
 <img width="1920" height="1080" alt="Screenshot (110)" src="https://github.com/user-attachments/assets/3b5ad637-ba9e-4122-8105-203c843a614b" />
+
