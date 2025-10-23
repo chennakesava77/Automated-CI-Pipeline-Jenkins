@@ -84,10 +84,10 @@ Below is an overview of the stages implemented in the Jenkinsfile:
 
 ##  Expected Outputs
 After a successful build:
-- ✅ All tests pass using Jest.
-- ✅ A `.zip` artifact is generated under `build/artifact.zip`.
-- ✅ Test results appear under **Test Result** in Jenkins.
-- ✅ Artifacts are archived and downloadable from Jenkins.
+- All tests pass using Jest.
+-  A `.zip` artifact is generated under `build/artifact.zip`.
+-  Test results appear under **Test Result** in Jenkins.
+-  Artifacts are archived and downloadable from Jenkins.
 
 **Generated File:**  
 
@@ -96,11 +96,11 @@ After a successful build:
 ##  Results / Screenshots
 Below are the required CI pipeline evidence screenshots:
 
-1. ✅ Jenkins Dashboard showing the project/job  
-2. ✅ Pipeline Stage View with all stages visible  
-3. ✅ Successful build status (Finished: SUCCESS)  
-4. ✅ Archived Artifacts showing `build/artifact.zip`  
-5. ✅ Test Report (Jest results: 1 test passed, 0 failed)
+1.  Jenkins Dashboard showing the project/job  
+2.  Pipeline Stage View with all stages visible  
+3.  Successful build status (Finished: SUCCESS)  
+4.  Archived Artifacts showing `build/artifact.zip`  
+5.  Test Report (Jest results: 1 test passed, 0 failed)
 
 *(Attach actual screenshots from your Jenkins UI here)*
 
@@ -153,9 +153,10 @@ pipeline {
     post {
         always {
             junit 'reports/junit/results.xml'
-            echo '✅ Build completed. Check test results and artifacts above.'
+            echo ' Build completed. Check test results and artifacts above.'
         }
     }
 }
 <img width="1920" height="1080" alt="Screenshot (110)" src="https://github.com/user-attachments/assets/3b5ad637-ba9e-4122-8105-203c843a614b" />
+
 
